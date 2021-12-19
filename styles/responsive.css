@@ -6,10 +6,10 @@
         display: none !important;
     }
     div.wrapper {
-        display: block !important;
+        display: flex !important;
     }
     div.buttonHamburger {
-        display: block !important;
+        display: flex !important;
     }
     header {
         flex-direction: column !important;
