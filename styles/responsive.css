@@ -1,0 +1,81 @@
+@media screen and (max-width: 1000px){
+    nav.topNavBar {
+        display: none !important;
+    }
+    ul.listNavItems {
+        display: none !important;
+    }
+    div.wrapper {
+        display: block !important;
+    }
+    div.buttonHamburger {
+        display: block !important;
+    }
+    header {
+        flex-direction: column !important;
+    }
+    div.leftSide {
+        width: 90vw !important;
+    }
+    .nameWebsite {
+        text-align: center !important;
+        font-size: 400% !important;
+    }
+    button.cta {
+        margin: 5% auto 0 !important;
+        font-size: 200%;
+    }
+    div.rightSide {
+        width: 80vw !important;
+    }
+    section.mainNFTS {
+        flex-direction: column;
+        flex-wrap: nowrap !important;
+    }
+    div.nftContainer {
+        width: 60vw !important;
+        transform: rotateY(0deg)rotateZ(0deg) !important;
+    }
+    div.nftContainer div.bottom {
+        opacity: 1 !important;
+    }
+    div.nftContainer div.bottom p{
+        transform: translateX(0px)!important;
+    }
+    div.link {
+        flex-direction: column-reverse !important;
+    }
+    div.link.rowInverted {
+        flex-direction: column-reverse !important;
+    }
+    div.link div.leftSideCommunity {
+        width: 90% !important;
+    }
+    p.titleLink {
+        text-align: center !important;
+    }
+    div.link img {
+        width: 70% !important;
+        margin: 0 auto !important;
+    }
+    div.profil {
+        flex-direction: column !important;
+        margin-bottom: 40% !important;
+    }
+    div.profil.rowInverted {
+        flex-direction: column !important;
+    }
+    div.profilPicture {
+        width: 100% !important;
+    }
+    div.descriptionProfil {
+        transform: translateY(-150%) !important;
+        padding-bottom: 5% !important;
+    }
+    div.profil.rowInverted div.descriptionProfil {
+        transform: translateY(-150%) !important;
+    }
+    div.profil:hover div.descriptionProfil {
+        transform: translateY(0%) !important;
+    }
+}

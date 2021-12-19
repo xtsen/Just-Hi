@@ -11,8 +11,7 @@ function createGallery() {
     nfts.forEach(nft => {
         card = `
         <a href="">
-            <div class="nftContainer">
-                <div class="top"></div>
+            <div class="nftContainer" style="background-image: url('./res/nft/${nft.id}.webp')">
                 <div class="bottom">
                     <p class="idNFT">#${nft.id}</p>
                     <p class="priceNFT">$${nft.price}</p>
@@ -20,6 +19,16 @@ function createGallery() {
             </div>
         </a>
         `
-        document.querySelector("main").innerHTML += card
+        document.querySelector(".mainNFTS").innerHTML += card
     });
+}
+function displayNav() {
+    checkbox = document.querySelector("#navDisplayed")
+    if (checkbox.checked == false) {
+        document.querySelector(".wrapper").style.transform = "translateY(0)"
+        checkbox.checked = true
+    }else {
+        document.querySelector(".wrapper").style.transform = "translateY(-150%)"
+        checkbox.checked = false
+    }
 }

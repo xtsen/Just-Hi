@@ -1,6 +1,5 @@
-const websiteName = "Just Ail"
 const WebsiteInfos = {
-        name: "Just Ail",
+        name: "Just Hi",
         desc: ""
     }
 
@@ -17,4 +16,16 @@ const nfts = [
         id: "0003",
         price: 740
     },
+    {
+        id: "0004",
+        price: 20
+    },
+    {
+        id: "0005",
+        price: 980
+    },
+    {
+        id: "0006",
+        price: 1590
+    }
 ]

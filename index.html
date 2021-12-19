@@ -9,21 +9,31 @@
         <link rel="stylesheet" href="./styles/default.css">
     </head>
     <body onload="init()">
+        <div class="wrapper">
+            <p class="itemNavWrapper js-scrollTo" href="#nft" onclick="displayNav()">Collection</p>
+            <p class="itemNavWrapper js-scrollTo" href="#community" onclick="displayNav()">Community</p>
+            <p class="itemNavWrapper js-scrollTo" href="#about" onclick="displayNav()">About</p>
+        </div>
+        <div class="buttonHamburger" onclick="displayNav()">
+            <div class="straight top"></div>
+            <div class="straight center"></div>
+            <div class="straight bottom"></div>
+        </div>
         <nav class='topNavBar'>
             <ul class='listNavItems'>
-                <li class='navItem'>
+                <li class='navItem js-scrollTo' href="#nft">
                     <p class="nameNavItem">Collections</p>
                     <div class="underPoint">
                         <p>Collections</p>
                     </div>
                 </li>
-                <li class='navItem'>
-                    <p class="nameNavItem">Buy one</p>
+                <li class='navItem js-scrollTo' href="#community">
+                    <p class="nameNavItem">Community</p>
                     <div class="underPoint">
-                        <p>Buy</p>  
+                        <p>Community</p>  
                     </div>
                 </li>
-                <li class='navItem'>
+                <li class='navItem js-scrollTo' href="#about">
                     <p class="nameNavItem">About</p>
                     <div class="underPoint">
                         <p>About</p>
@@ -35,9 +45,76 @@
             <div class="leftSide">
                 <p class="nameWebsite name">Just High</p>
                 <p class="descriptionWebsite">The collection <em class="name">Cryptoweed</em> is the new NFT collection which is about weed type and big names in this game.</p>
+                <button class="cta js-scrollTo" href="#nft">Get Started</button>
             </div>
+            <div class="rightSide"></div>
         </header>
-        <main></main>
+        <main>
+            <h2 class="titleSection" id="nft">Our NFT</h2>
+            <div class="hr"></div>
+            <section class="mainNFTS"></section>
+            <h2 class="titleSection" id="community">Community</h2>
+            <div class="hr"></div>
+            <section class="community">
+                <div class="link discord">
+                    <div class="leftSideCommunity">
+                        <p class="titleLink">OpenSea</p>
+                        <p class="linkDescription">Discover our openSea profil. You will discover our collections and don't forget to click on the ring to be remind when there is new items !</p>
+                    </div>
+                    <img src="https://cdn-images-1.medium.com/max/1200/1*U0m-Cl7qvflUX4QmdIdzoQ.png" alt="">
+                </div>
+                <div class="link discord rowInverted">
+                    <div class="leftSideCommunity">
+                        <p class="titleLink">Discord</p>
+                        <p class="linkDescription">Join our Discord to talk with our community and our crypto enthusiast. You will see our new collections in early access, don't miss that !</p>
+                    </div>
+                    <img src="https://i2.wp.com/osintcurio.us/wp-content/uploads/2021/04/alexander-shatov-discord-unsplash.jpg?zoom=2&resize=870%2C773&ssl=1" alt="">
+                </div>
+            </section>
+            <h2 class="titleSection" id="about">About</h2>
+            <div class="hr"></div>
+            <section class="about">
+                <div class="profil CommunityManager">
+                    <div class="profilPicture"></div>
+                    <div class="descriptionProfil">
+                        <p class="titleRole">Community Manager</p>
+                        <p class="nameProfil">Matys</p>
+                        <div class="separation"></div>
+                        <p class="shortProfilDescription"></p>
+                    </div>
+                </div>
+                <div class="profil Designer rowInverted">
+                    <div class="profilPicture"></div>
+                    <div class="descriptionProfil">
+                        <p class="titleRole">Designer</p>
+                        <p class="nameProfil">Margot</p>
+                        <div class="separation"></div>
+                        <p class="shortProfilDescription"></p>
+                    </div>
+                </div>
+                <div class="profil frontendDev ">
+                    <div class="profilPicture"></div>
+                    <div class="descriptionProfil">
+                        <p class="titleRole">Frontend Developer</p>
+                        <p class="nameProfil">Nesta</p>
+                        <div class="separation"></div>
+                        <p class="shortProfilDescription"></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <input type="checkbox" id="navDisplayed">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                    var page = $(this).attr('href'); // Page cible
+                    var speed = 600; // Durée de l'animation (en ms)
+                    $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                    return false;
+                });
+            });
+        </script>
         <script src="./js/data.js"></script>
         <script src="./js/main.js"></script>
     </body>

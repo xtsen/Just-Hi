@@ -1,23 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('./responsive.css');
 
 :root {
-    --primary: #30343f;
-    --secondary: #fafaff;
+    --primary: #222222;
+    --secondary: #fff;
     --tertiary: #e4d9ff;
 
     --color: #fff;
-    --button: rgb(1, 251, 126);
+    --button: #38D69F;
 }
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
-
 body {
-    background-color: var(--primary);
     color: var(--color);
     font-family: 'Outfit', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: url('../res/background/background\ body\ 2.svg');
+    background-position: center;
+    background-size: cover;
+}
+div.hr {
+    height: 5px;
+    width: 100vw;
+    background: linear-gradient(to right, rgb(1, 255, 255, 0.1), rgb(1, 255, 255, 0.5), rgb(1, 255, 255, 0.8), rgb(1, 255, 255, 0.5), rgb(1, 255, 255, 0.1));
 }
 nav.topNavBar {
     position: fixed;
@@ -70,18 +79,73 @@ li.navItem:hover div.underPoint{
 li.navItem:hover p.nameNavItem{
     opacity: 0;
 }
+div.wrapper {
+    z-index: 1000;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--secondary);
+    color: var(--primary);
+    opacity: 1;
+    transform: translateY(-150%);
+    transition: all 0.5s ease;
+}
+div.wrapper p:first-of-type {
+    margin-top: 50%;
+}
+div.wrapper p {
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 10%;
+}
+div.buttonHamburger {
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 2%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+}
+div.straight {
+    display: flex;
+    width: 30px;
+    height: 3px;
+    border-radius: 50px;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+div.top {
+    margin: 30% auto 0;
+}
+div.center {
+    margin: 10% auto 0;
+}
+div.bottom {
+    margin: 10% auto 0;
+}
 header {
     display: flex;
     width: 100vw;
     height: 100vh;
     align-items: center;
     justify-content: space-around;
+    background-position: center;
+    background-image: url('../res/background/background\ header.svg');
+    background-size: cover;
 }
 div.leftSide {
-    width: 80vw;
+    width: 50vw;
+    border-radius: 10px;
+    padding: 2%;
 }
 .nameWebsite {
-    text-align: center;
+    text-align: left;
     font-size: 1000%;
     font-weight: bold;
     text-shadow: rgba(1, 251, 126, 0.5) 1px 1px, rgba(1, 251, 126, 0.4) 2px 2px, rgba(1, 251, 126, 0.3) 3px 3px, rgba(1, 251, 126, 0.2) 4px 4px, rgba(1, 251, 126, 0.1) 5px 5px, rgba(1, 251, 126, 0.05) 6px 6px;
@@ -92,8 +156,35 @@ div.leftSide {
     text-shadow: rgba(1, 251, 126, 0.5) 5px 5px, rgba(1, 251, 126, 0.4) 10px 10px, rgba(1, 251, 126, 0.3) 15px 15px, rgba(1, 251, 126, 0.2) 20px 20px, rgba(1, 251, 126, 0.1) 25px 25px, rgba(1, 251, 126, 0.05) 30px 30px;
 }
 p.descriptionWebsite {
-    text-align: center;
+    text-align: left;
     font-size: 200%;
+}
+button.cta {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 4%;
+    color: var(--color);
+    font-size: 150%;
+    font-weight: bold;
+    border: 2px solid var(--button);
+    background-color: transparent; 
+    border-radius: 15px; 
+    cursor: pointer; 
+    margin: 5% 0 0; 
+    transition: all 0.4s ease;
+}
+button.cta:hover {
+    background-color: var(--button)
+}
+div.rightSide {
+    width: 30vw;
+    height: 40vh;
+    border-radius: 15px 60px 1px 60px;
+    background-image: url('../res/background/right\ header.webp');
+    background-position: center center;
+    background-size: cover;
 }
 div.underPoint p {
     color: var(--secondary);
@@ -105,42 +196,62 @@ li.navItem:hover div.underPoint p {
     opacity: 1;
     transform: scale(0.15);
 }
+header > img {
+    width: 300px;
+    height: 300px;
+}
 main {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	height: 100%;
-    margin-bottom: 30%;
+	justify-content: flex-start;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0 0 30vh;
+}
+h2.titleSection {
+    font-size: 400%;
+    margin-top: 5%;
+}
+section.mainNFTS {
+    display: flex;
+	align-items: center;
+	justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 10% auto 0;
+    gap: 10vw;
 }
 
 div.nftContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     width: 20vw;
-    height: fit-content;
+    height: 40vh;
     background-color: var(--secondary);
     border-radius: 10px;
     transform: rotateY(40deg)rotateZ(-40deg);
     transition: all 0.75s ease;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: rgba(255, 255, 255, 0.5) -4px -4px, rgba(1, 255, 255, 0.4) -8px -8px, rgba(1, 255, 255, 0.3) -12px -12px, rgba(1, 255, 255, 0.2) -16px -16px, rgba(1, 255, 255, 0.1) -20px -20px, rgba(1, 251, 126, 0.05) -24px -24px;
+    backdrop-filter: grayscale(0.1);
 }
 div.nftContainer:hover {
     transform: rotateY(0deg)rotateZ(0deg);
-}
-div.nftContainer div.top{
-    width: 100%;
-    height: 100px;
-    background-image: url("../res/#0001.png");
-    background-position: center center;
-    background-size: cover;
-    backdrop-filter: grayscale(0.1);
-    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: none;
 }
 div.nftContainer div.bottom {
     display: flex; 
     justify-content: center; 
     align-items: center; 
     flex-direction: column; 
+    width: 100%;
     opacity: 0;
+    backdrop-filter: blur(15px);
+    /* background-color: var(--secondary); */
     transition: all 0.75s ease;
 }
 div.nftContainer:hover div.bottom {
@@ -148,11 +259,116 @@ div.nftContainer:hover div.bottom {
 }
 div.nftContainer div.bottom p{
     transform: translateX(-150px);
-    color: var(--primary);
+    color: var(--secondary);
     text-decoration: none;
     font-size: 200%;
     transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 div.nftContainer:hover div.bottom p{
     transform: translateX(0px);
+}
+section.community {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    width: 100vw;
+}
+div.link {
+    display: flex;
+    margin: 0 auto 10%;
+    width: 70%;
+    border-radius: 5px;
+}
+div.link:first-of-type {
+    margin-top: 5%;
+}
+div.link div.leftSideCommunity {
+    text-align: left;
+    width: 60%;
+    padding: 2% 5% 0 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+p.titleLink {
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+p.linkDescription {
+    font-size: 120%;
+}
+div.link img {
+    width: 40%;
+    border-radius: 5px;
+}
+div.link:first-of-type img {
+    width: 35%;
+    border-radius: 5px;
+}
+div.link.rowInverted {
+    flex-direction: row-reverse;
+}
+section.about {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    width: 100vw;
+}
+div.profil {
+    display: flex;
+    margin: 0 auto 10%;
+    overflow: hidden;
+    width: 70%;
+    backdrop-filter: blur(20px);
+    border-radius: 5px;
+}
+div.profil:first-of-type {
+    margin-top: 5%;
+}
+div.profil:last-of-type {
+    margin-bottom: 0;
+}
+div.profilPicture {
+    width: 30%;
+    height: 250px;
+    background-image: url('../res/nft/0005.webp');
+    background-position: center;
+    background-size: cover;
+    z-index: 10;
+}
+div.descriptionProfil {
+    background-color: rgba(22, 22, 22, 0.151);
+    width: 100%;
+    padding:5% 0 0 10%;
+    transform: translateX(-150%);
+    transition: all 0.5s ease;
+}
+div.profil:hover div.descriptionProfil {
+    transform: translateX(0%);
+}
+p.titleRole {
+    color: rgb(218, 218, 218);
+}
+p.nameProfil {
+    font-size: 200%;
+    font-weight: bold;
+}
+div.separation {
+    width: 40px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: var(--primary);
+    margin: 1% 0;
+}
+div.profil.rowInverted {
+    flex-direction: row-reverse;
+}
+div.profil.rowInverted div.descriptionProfil {
+    transform: translateX(150%);
+}
+div.profil.rowInverted:hover div.descriptionProfil {
+    transform: translateX(0%);
 }
