@@ -83,6 +83,7 @@ div.wrapper {
     z-index: 1000;
     position: fixed;
     display: none;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-color: var(--secondary);
