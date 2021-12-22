@@ -64,6 +64,7 @@ nav.topNavBar {
 p.leftNameWebsite {
     margin-left: 5%;
     font-weight: bold;
+    cursor: pointer;
 }
 ul.listNavItems {
     display: flex;
