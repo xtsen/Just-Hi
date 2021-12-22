@@ -1,4 +1,7 @@
 @media screen and (max-width: 1000px){
+    p.cursorText {
+        display: none !important;
+    }
     nav.topNavBar {
         display: none !important;
     }
@@ -58,24 +61,10 @@
         width: 70% !important;
         margin: 0 auto !important;
     }
+    section.team {
+        flex-direction: column;
+    }
     div.profil {
-        flex-direction: column !important;
-        margin-bottom: 40% !important;
-    }
-    div.profil.rowInverted {
-        flex-direction: column !important;
-    }
-    div.profilPicture {
-        width: 100% !important;
-    }
-    div.descriptionProfil {
-        transform: translateY(-150%) !important;
-        padding-bottom: 5% !important;
-    }
-    div.profil.rowInverted div.descriptionProfil {
-        transform: translateY(-150%) !important;
-    }
-    div.profil:hover div.descriptionProfil {
-        transform: translateY(0%) !important;
+        width: 80% !important;
     }
 }

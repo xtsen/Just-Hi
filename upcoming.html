@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Just Hi | NFT</title>
+
+        <link rel="stylesheet" href="./styles/default.css">
+    </head>
+    <body onload="init()">
+        <p class="cursorText">Just&nbsp;Hi - NFT - New -</p>
+        <div class="wrapper">
+        <p class="itemNavWrapper js-scrollTo" href="#about" onclick="inre()">About</p>
+            <p class="itemNavWrapper js-scrollTo" href="#nft" onclick="displayNav()">Collection</p>
+            <p class="itemNavWrapper js-scrollTo" href="#community" onclick="displayNav()">Community</p>
+            <p class="itemNavWrapper js-scrollTo" href="#roadmap" onclick="displayNav()">Roadmap</p>
+            <p class="itemNavWrapper js-scrollTo" href="#team" onclick="displayNav()">Team</p>
+        </div>
+        <div class="buttonHamburger" onclick="displayNav()">
+            <div class="straight top"></div>
+            <div class="straight center"></div>
+            <div class="straight bottom"></div>
+        </div>
+        <nav class='topNavBar'>
+            <p class='leftNameWebsite name'></p>
+        </nav>
+        <header>
+            <div class="leftSide">
+                <p class="nameWebsite upcoming">Coming soon</p>
+                <button class="cta js-scrollTo" onclick="inRedirection('index')">Return</button>
+            </div>
+        </header>
+        <script src="./js/data.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

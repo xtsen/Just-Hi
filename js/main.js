@@ -5,22 +5,6 @@ function init() {
     websitesNameLabel.forEach(websiteNameLabel => {
         websiteNameLabel.innerText = WebsiteInfos.name
     });
-    createGallery()
-}
-function createGallery() {
-    nfts.forEach(nft => {
-        card = `
-        <a href="">
-            <div class="nftContainer" style="background-image: url('./res/nft/${nft.id}.webp')">
-                <div class="bottom">
-                    <p class="idNFT">#${nft.id}</p>
-                    <p class="priceNFT">$${nft.price}</p>
-                </div>
-            </div>
-        </a>
-        `
-        document.querySelector(".mainNFTS").innerHTML += card
-    });
 }
 function displayNav() {
     checkbox = document.querySelector("#navDisplayed")
@@ -32,3 +16,23 @@ function displayNav() {
         checkbox.checked = false
     }
 }
+function redirection(target) {
+    window.location.href = "https://" + target
+}
+function inRedirection(target) {
+    window.location.href = "./" + target + ".html"
+}
+
+const text = document.querySelector(".cursorText")
+text.innerHTML = text.textContent.replace(/\S/g, "<span class='spanLetterCursor' >$&</span>")
+
+const element = document.querySelectorAll(".spanLetterCursor")
+for (let i = 0; i < element.length; i++) {
+    element[i].style.transform = "rotate("+i*23+"deg)"
+}
+
+document.addEventListener("mousemove", function(e)
+{
+    text.style.left = e.pageX + "px";
+    text.style.top = e.pageY + "px";
+})
