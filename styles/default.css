@@ -239,6 +239,18 @@ a.backgroundLink {
 a:hover {
     background: var(--button);
 }
+p.comingSoonText {
+    display: none;
+    text-align: left;
+    font-size: 600%;
+    font-weight: bold;
+    text-shadow: rgb(0, 79, 252, 0.5) 0px 1px, rgb(0, 79, 252, 0.4) 0px 2px, rgb(0, 79, 252, 0.3) 0px 3px, rgb(0, 79, 252, 0.2) 0px 4px, rgb(0, 79, 252, 0.1) 0px 5px, rgb(0, 79, 252, 0.05) 0px 6px;
+    transition: all 0.5s ease;
+}
+p.comingSoonText:hover {
+    transform: translateY(-20px);
+    text-shadow: rgb(0, 79, 252, 0.5) 0px 5px, rgb(0, 79, 252, 0.4) 0px 10px, rgb(0, 79, 252, 0.3) 0px 15px, rgb(0, 79, 252, 0.2) 0px 20px, rgb(0, 79, 252, 0.1) 0px 25px, rgb(0, 79, 252, 0.05) 0px 30px;
+}
 div.nftContainer {
     display: flex;
     flex-direction: column;
@@ -329,6 +341,19 @@ div.link:first-of-type img {
 }
 div.link.rowInverted {
     flex-direction: row-reverse;
+}
+div.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 30vw;
+}
+.iconSocialMedia {
+    width: 20%;
+    height: 7.5%;
+    cursor: pointer;
 }
 h1 {
     font-family: 'Saira', sans-serif;

@@ -8,17 +8,21 @@ function init() {
     createGallery()
 }
 function createGallery() {
-    nfts.forEach(nft => {
-        card = `
-        <a href="" class="backgroundLink">
-            <div class="nftContainer" style="background-image: url('./res/nft/${nft.id}.webp')">
-                <div class="bottom">
-                    <p class="idNFT">#${nft.id}</p>
-                    <p class="priceNFT">$${nft.price}</p>
+    if (nfts.length > 0) {
+        nfts.forEach(nft => {
+            card = `
+            <a href="" class="backgroundLink">
+                <div class="nftContainer" style="background-image: url('./res/nft/${nft.id}.webp')">
+                    <div class="bottom">
+                        <p class="idNFT">#${nft.id}</p>
+                        <p class="priceNFT">$${nft.price}</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        `
-        document.querySelector(".mainNFTS").innerHTML += card
-    });
+            </a>
+            `
+            document.querySelector(".mainNFTS").innerHTML += card
+        });
+    }else {
+        document.querySelector(".comingSoonText").style.display = "block"
+    }
 }
