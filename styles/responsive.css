@@ -31,6 +31,12 @@
     div.rightSide {
         width: 80vw !important;
     }
+    section {
+        margin-bottom: 20% !important;
+    }
+    p.descriptionWebsite {
+        font-size: 150% !important;
+    }
     section.mainNFTS {
         flex-direction: column;
         flex-wrap: nowrap !important;
