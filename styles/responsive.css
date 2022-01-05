@@ -35,6 +35,9 @@
         flex-direction: column;
         flex-wrap: nowrap !important;
     }
+    p.comingSoonText {
+        font-size: 250% !important;
+    }
     div.nftContainer {
         width: 60vw !important;
         transform: rotateY(0deg)rotateZ(0deg) !important;
